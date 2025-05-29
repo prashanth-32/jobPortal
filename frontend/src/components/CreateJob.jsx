@@ -17,7 +17,7 @@ const CreateJob = () => {
 
     const handlePost = async () =>{
         try{
-            const {data} = await axios.post('https://jobportal-backend-ucsl.onrender.comcreateJob',{jobTitle,companyName,Location,jobType,salaryMin,salaryMax,description});
+            const {data} = await axios.post('https://jobportal-backend-ucsl.onrender.com/createJob',{jobTitle,companyName,Location,jobType,salaryMin,salaryMax,description});
             console.log(data);
         }
         catch(err)
