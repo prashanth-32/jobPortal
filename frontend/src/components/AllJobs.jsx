@@ -13,7 +13,7 @@ const AllJobs = () => {
   useEffect(()=>{
     const getData = async () =>{
       try{
-        const {data} = await axios.get("https://jobportal-backend-ucsl.onrender.composts");
+        const {data} = await axios.get("https://jobportal-backend-ucsl.onrender.com/posts");
         setJobs(data);
         console.log(data);
       }
