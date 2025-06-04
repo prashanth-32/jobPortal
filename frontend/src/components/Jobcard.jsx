@@ -1,9 +1,21 @@
 import amazon from "../assets/amazon.png";
+import microsoftLogo from "../assets/microsoft.png";
+import tcs from "../assets/tata.png";
 import swiggy from "../assets/swiggy.png";
 import tesla from "../assets/tesla.png";
 import { BiUserPlus } from "react-icons/bi";
 import { RiBuildingLine } from "react-icons/ri";
 import { GoStack } from "react-icons/go";
+import googleLogo from '../assets/google.png';
+
+const logos = {
+  amazon: amazon,
+  google: googleLogo,
+  microsoft:microsoftLogo,
+  tcs:tcs,
+  swiggy:swiggy,
+  tesla:tesla
+};
 
 
 const Jobcard = ({ info }) => {
@@ -12,7 +24,7 @@ const Jobcard = ({ info }) => {
         <div className='rounded-md p-5 flex flex-col gap-3 w-full' style={{ boxShadow: "0 0 4px rgba(0, 0, 0, 0.2)" }}>
             <div className='flex justify-between' >
                 <div style={{ boxShadow: "0 0 4px rgba(0, 0, 0, 0.2)" }} className="rounded-md p-1">
-                    <p>{info.companyName}</p>
+                    <img src={logos[info.companyName.toLowerCase()]} alt="img" className="h-[80px] w-[80px] rounded-full"/>
                 </div>
                 <div>
                     <button className="bg-[#B0D9FF] p-2 rounded-lg h-[32px] flex">24h Ago</button>
